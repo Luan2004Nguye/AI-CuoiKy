@@ -193,7 +193,7 @@ def reset_game():
     global game, board
     game.reset([human_player, AI_Player(algo_neg)])
     board = game.board
-    update_board()
+    p.scatter('x', 'y', source=circles, size=50, color='color', line_color="black")
     notification_div.text = "Welcome to Connect Four!"
 
 reset_button.on_click(reset_game)
